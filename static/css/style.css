@@ -1,0 +1,44 @@
+p {
+    color: red;
+    width: 60px;
+    margin: auto;
+}
+div {
+    color: green;
+    font-size: x-large;
+    width: 200px;
+    margin: auto;
+}
+.red_css {
+    color: red;
+}
+.blue_css {
+    color: blue;
+}
+.yellow_background {
+    background: yellow;
+}
+.title:hover{
+    text-decoration: underline;
+}
+a {
+    color: deepskyblue;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.5s all;
+}
+a:hover,
+a:active{
+    color: deeppink;
+    font-size: 40px;
+}
+h1 {
+    display: inline-block;
+    background: greenyellow;
+    width: 300px;
+    height: 100px;
+    padding: 10px;
+    background: url('../images/square.png');
+    background-size: cover;
+    margin: 50px;
+}

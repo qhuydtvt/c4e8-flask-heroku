@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Some Street Food</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/css/style_w3css.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+    <link rel="stylesheet" href="../static/css/style_food.css">
+    <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Arial", sans-serif}
+    .w3-bar-block .w3-bar-item {padding:20px}
+    </style>
+</head>
+<body>
+
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card-2 w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">Nothing</a>
+  <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">More Nothing</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-bar-item w3-button w3-padding-16 w3-left w3-white w3-hover-text-grey" onclick="w3_open()">☰</div>
+    <div class="w3-bar-item w3-right w3-padding-16">Mail</div>
+    <div class="w3-bar-item w3-center w3-padding-16">Tien's Food</div>
+  </div>
+</div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+      {% for foo in food_list1 %}
+        <div class="w3-quarter">
+          <img src={{ foo["src"] }} alt={{ foo["name_food"] }} style="width:100%">
+          <h3>{{ foo["name_food"] }}</h3>
+          <p>{{ foo["title"] }}</p>
+          <h4>{{ foo["price"] }}</h4>
+        </div>
+      {% endfor %}
+  </div>
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+      {% for foo in food_list2 %}
+        <div class="w3-quarter">
+          <img src={{ foo["src"] }} alt={{ foo["name_food"] }} style="width:100%">
+          <h3>{{ foo["name_food"] }}</h3>
+          <p>{{ foo["title"] }}</p>
+          <h4>{{ foo["price"] }}</h4>
+        </div>
+      {% endfor %}
+  </div>
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+
+  <hr id="about">
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32 w3-center">
+    <h3>About Me, The Food Man</h3><br>
+    <img src="https://scontent.fhan5-1.fna.fbcdn.net/v/t1.0-9/17264451_910258192447724_702570593984110698_n.jpg?oh=6c5950f5168e9808293f964ddd8ea14d&oe=5951E097" alt="Me" class="w3-image" style="display:block;margin:auto" width="400" height="400">
+    <div class="w3-padding-32">
+      <h4><b>I am Who I Am!</b></h4>
+      <h6><i>With Passion For Real, Good Food</i></h6>
+      <p>Cửa hàng của chúng tôi, trên 3 năm thương hiệu, được sự tin dụng của trên 3/4 thực khách phương Tây tới Hà Nội cùng với sự hưởng ứng của toàn thể thực khách Việt Nam khi bước đến. Chúng tôi khẳng định luôn mạng đến với quý vị chất lượng tốt nhất trên từng món ăn, từng chiếc bát, chiếc đũa, dĩa và cốc. Rất vui lòng nhận được sự góp ý chân thành. Xin cảm ơn và chúc quý khách ngon miệng!</p>
+    </div>
+  </div>
+  <hr>
+
+  <!-- Footer -->
+  <footer class="w3-row-padding w3-padding-32">
+    <div class="w3-third">
+      <h3>FOOTER</h3>
+      <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+      <p>Powered by <a href="https://www.facebook.com/kisskiss1709" target="_blank">Tiến Phạm</a></p>
+    </div>
+
+    <div class="w3-third">
+      <h3>BLOG POSTS</h3>
+      <ul class="w3-ul w3-hoverable">
+        <li class="w3-padding-16">
+          <img src="http://a3.mzstatic.com/us/r30/Purple62/v4/9c/52/40/9c524046-35b7-e328-e0d4-6cbf89d9ac70/icon175x175.jpeg" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Foody</span><br>
+          <span>By Foody.vn</span>
+        </li>
+        <li class="w3-padding-16">
+          <img src="https://yt3.ggpht.com/-VHsPVC09Kvk/AAAAAAAAAAI/AAAAAAAAAAA/SE_jxSUAApo/s900-c-k-no-mo-rj-c0xffffff/photo.jpg" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Feedy</span><br>
+          <span>By Feedy.vn</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w3-third w3-serif">
+      <h3>POPULAR TAGS</h3>
+      <p>
+        <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dinner</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Salmon</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">France</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Drinks</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Flavors</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Cuisine</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Chicken</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dressing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fried</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fish</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Duck</span>
+      </p>
+    </div>
+  </footer>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
